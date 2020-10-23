@@ -21,3 +21,4 @@ https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-view
 
 
 Photo preview:
+![]https://raw.githubusercontent.com/MariusTN/SimpleMedLogin/main/images/Screenshot_4.png
