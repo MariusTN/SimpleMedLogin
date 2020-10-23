@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+//not sure why I did these variables, never having a stable one, lol
+$h1: clamp(2rem, 2.5vw, 3rem);
+$h2: clamp(2rem, 2.3vw, 2.6rem);
+$p: clamp(1.5rem, 2vw, 1.8rem);
+
+//using this
+$green: #47c269;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Kanit', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h2{
+    letter-spacing: 0.15rem;
+    font-size: $h2;
+}
+
+h1{
+    letter-spacing: 2px;
+    font-size: $h1;
+}
+
+p{
+    line-height: 1.5;
+    font-size: $p;
+    
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.sp1{
+    color: rgb(194, 35, 35);
+}
+
+.sp2{
+    color: $green;
+}
+
+
+
+.left{
+    flex: 1 1 60rem;
+    display: flex;
+    flex-direction: column;
+    header{
+        margin: 2rem 6rem;
+    }
+
+    .left-inner{
+        margin: 10rem 6rem;
+        .title{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 5rem;
+        }
+
+        .description{
+            text-align: center;
+            color: rgb(59, 59, 59);
+            line-height: 1.3;
+            width: 45rem;
+            margin: 2rem auto;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: 6rem auto;
+            width: 40rem;
+        
+            input{
+                margin: 1rem auto;
+                padding: 1.5rem;
+                width: 40rem;
+                border: none;
+                border-radius: 1.5rem;
+                background-color: rgb(231, 230, 230);
+            }
+
+            input:focus{
+                outline: none;
+                box-shadow: 3px 3px 10px rgba(0,0,0, 0.9);
+            }
+            a{
+                margin-top: 0.5rem;
+                margin-bottom: 3rem;
+                text-decoration: none;
+                font-size: 1.5rem;
+                width: 18rem;
+                color: $green;
+            }
+            a:focus{
+                outline: rgb(6, 100, 129) solid 3px;
+                color: rgb(8, 176, 228);
+                transition: all 0.4s ease-in-out;
+            }
+
+            button{
+                background-color: #000;
+                color: #fff;
+                padding: 1.5rem;
+                width: 40rem;
+                margin: 0 auto;
+                border: none;
+                border-radius: 1.5rem;
+            }
+
+            button:hover{
+                background-color: rgba(0,0,0, 0.5);
+                transition: all 0.5s ease-in-out;
+            }
+
+            button:focus{
+                box-shadow: 3px 3px 10px rgba(0,0,0, 0.9);
+                transition: all 0.5s ease;
+                outline: none;
+            }
+        }
+    }
+
+    .contact{
+        text-align: center;
+        p{
+            font-size: 2rem;
+        }
+
+        a{
+            margin-bottom: 3rem;
+            text-decoration: none;
+            font-size: 1.5rem;
+            width: 200px;
+            height: auto;
+            color: $green;
+        }
+        a:focus{
+            outline: rgb(6, 100, 129) solid 3px;
+            color: rgb(8, 176, 228);
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    .footer{
+        text-align: center;
+        margin: 2rem auto 0 auto;
+        align-items: flex-end;
+    }
+}
+
+.right{
+    background-image: linear-gradient(rgba(250, 250, 250, 0.2), rgba(0, 0, 0, 0.3)), url(../images/medicina.jpg);
+    background-size: cover;
+    flex: 1 1 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 45rem;
+    height: auto;
+    padding: 4rem;
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    box-shadow: 4px 1px 10px rgba(0,0,0, 0.4);
+    img{
+        height: auto;
+        width: 6rem;
+    }
+
+    h2{
+        color: #fff;  
+    }
+
+    p{
+        color: rgb(255, 255, 255);
+        font-size: $p;
+    }
+}
+
+.main-image{
+    height: auto;
+    width: 60%;
+}
+
+
+@media screen and (max-width: 1024px){
+
+    main{
+        flex-wrap: wrap;
+    }
+    
+    .right{
+        background: url(../images/unnamed.jpg);
+        background-size: cover;
+        padding: 6rem;
+    }
+
+    .footer{
+        display: none;
+    }
+
+}
